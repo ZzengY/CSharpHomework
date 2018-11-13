@@ -57,7 +57,7 @@ namespace WinForm
             Zz.order.AddRange(f1.Zz.order);
             f1.Bin(Zz.order);
             f1.Show();
-            Zz.Export(Zz.order, "a.xml");
+            Zz.Export(Zz.order, @"..\..\a.xml");
             this.Close();
         }
 

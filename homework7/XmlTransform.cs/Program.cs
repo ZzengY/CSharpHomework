@@ -22,7 +22,7 @@ namespace XmlTransform
                 XslCompiledTransform xt = new XslCompiledTransform();
                 xt.Load(@"..\..\a.xslt");
 
-                FileStream outFileStream = File.OpenWrite(@"..\..\BoolList.html");
+                FileStream outFileStream = File.OpenWrite(@"..\..\a.html");
                 XmlTextWriter writer =
                     new XmlTextWriter(outFileStream, System.Text.Encoding.UTF8);
                 xt.Transform(nav, null, writer);

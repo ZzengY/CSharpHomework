@@ -17,7 +17,7 @@ namespace WinForm
             public Form1()
             {
                 InitializeComponent();          
-                Zz.Import("a.xml");
+                Zz.Import(@"..\..\a.xml");
                 orderBindingSource.DataSource = Zz.order;
         }
            

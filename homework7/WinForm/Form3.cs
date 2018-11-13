@@ -77,7 +77,7 @@ namespace WinForm
             }
             f1.Bin(f1.Zz.order);
             f1.Show();
-            f1.Zz.Export(f1.Zz.order, "a.xml");
+            f1.Zz.Export(f1.Zz.order, @"..\..\a.xml");
             this.Close();
         }
 
