@@ -38,18 +38,30 @@ namespace WinForm
                 switch (n)
                 {
                     case 0:
+                        if (!f1.Zz.oExam(s1)){
+                            MessageBox.Show("Please check your input!");
+                            break;
+                        }
                         f1.Zz.order[a].orderNumber = s1;
                         break;
                     case 1:
                         f1.Zz.order[a].clientName = s1;
                         break;
                     case 2:
-                        f1.Zz.order[a].orderdetails[0].productName = s1;
+                        if (!f1.Zz.phoExam(s1))
+                        {
+                            MessageBox.Show("Please check your input!");
+                            break;
+                        }
+                        f1.Zz.order[a].cliPhoNum = s1;
                         break;
                     case 3:
-                        f1.Zz.order[a].orderdetails[0].productNumber = s1;
+                        f1.Zz.order[a].orderdetails[0].productName = s1;
                         break;
                     case 4:
+                        f1.Zz.order[a].orderdetails[0].productNumber = s1;
+                        break;
+                    case 5:
                         try
                         {
                             f1.Zz.order[a].orderdetails[0].productPrice = Convert.ToDouble(s1); 
@@ -65,6 +77,7 @@ namespace WinForm
             }
             f1.Bin(f1.Zz.order);
             f1.Show();
+            f1.Zz.Export(f1.Zz.order, "a.xml");
             this.Close();
         }
 

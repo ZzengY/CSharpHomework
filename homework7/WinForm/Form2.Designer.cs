@@ -42,6 +42,8 @@ namespace WinForm
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -96,7 +98,6 @@ namespace WinForm
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 28);
             this.textBox6.TabIndex = 8;
-            
             // 
             // label4
             // 
@@ -135,11 +136,30 @@ namespace WinForm
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 18);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "电话号码：";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(117, 169);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 28);
+            this.textBox3.TabIndex = 14;
+            
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -153,6 +173,7 @@ namespace WinForm
             this.Controls.Add(this.textBox1);
             this.Name = "Form2";
             this.Text = "Form2";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +192,7 @@ namespace WinForm
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

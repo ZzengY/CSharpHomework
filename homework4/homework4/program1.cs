@@ -24,7 +24,7 @@ namespace program1
                 if (args.hour == DateTime.Now.Hour && args.minute == DateTime.Now.Minute && args.second == DateTime.Now.Second)
                 {
                     RunTime(this, args);
-                    break;
+                    System.Threading.Thread.Sleep(1000);
                 }
             }
         }

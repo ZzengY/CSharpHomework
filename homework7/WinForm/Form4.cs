@@ -44,6 +44,14 @@ namespace WinForm
                         a++;
                         break;
                     case 2:
+                        if (s0 == i.cliPhoNum)
+                        {
+                            break;
+                        }
+                        a++;
+                        break;
+
+                    case 3:
                         foreach(OrderDetails o in i.orderdetails)
                         if (s0 == o.productName)
                         {
@@ -51,7 +59,7 @@ namespace WinForm
                         }
                         a++;
                         break;
-                    case 3:
+                    case 4:
                         foreach (OrderDetails o in i.orderdetails)
                             if (s0 == o.productNumber)
                             {
@@ -59,7 +67,7 @@ namespace WinForm
                         }
                         a++;
                         break;
-                    case 4:
+                    case 5:
                         foreach (OrderDetails o in i.orderdetails)
                             if (Convert.ToDouble(s0) == o.productPrice)
                             {

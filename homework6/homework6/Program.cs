@@ -12,19 +12,19 @@ namespace homework6
         {
             OrderService Zz = new OrderService();
 
-            OrderDetails a = new OrderDetails("hand", "24562",120000);                
-            OrderDetails b = new OrderDetails("second", "000", 120);
-            OrderDetails c = new OrderDetails("third", "022", 33333);
+            //OrderDetails a = new OrderDetails("hand", "24562", 120000);
+            //OrderDetails b = new OrderDetails("second", "000", 120);
+            //OrderDetails c = new OrderDetails("third", "022", 33333);
 
-            OrderDetails[] z = new OrderDetails[] { a };
-            OrderDetails[] z1 = new OrderDetails[] { b };
-            OrderDetails[] z2 = new OrderDetails[] { c };
+            //OrderDetails[] z = new OrderDetails[] { a };
+            //OrderDetails[] z1 = new OrderDetails[] { b };
+            //OrderDetails[] z2 = new OrderDetails[] { c };
 
-            Zz.AddOrder("12345", "MANZ", z);
-            Zz.AddOrder("1", "LADYZ", z1);
-            Zz.AddOrder("333", "CHILDZ", z2);
+            //Zz.AddOrder("12345", "MANZ", z);
+            //Zz.AddOrder("1", "LADYZ", z1);
+            //Zz.AddOrder("333", "CHILDZ", z2);
 
-            Zz.calOrderPri();
+            //Zz.calOrderPri();
             //Zz.Export(Zz.order);
             Zz.Import("text.xml");
 

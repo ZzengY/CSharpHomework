@@ -1,24 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace homework7
 {
+    [Serializable]
     public class OrderService
     {
+        
         public List<Order> order { get; set; }
         public OrderService()
         {
             order = new List<Order>();
         }
-        public void AddOrder(string oNum, string cName, OrderDetails[] or)
+        public void AddOrder(string oNum, string cName,string cPhoNum, OrderDetails[] or)
         {
-            
+           
             Order a = new Order();
             a.orderNumber = oNum;
             a.clientName = cName;
+            a.cliPhoNum = cPhoNum;
             for (int i = 0; i < or.Length; i++)
             {
                 a.orderdetails.Add(or[i]);               
@@ -168,7 +174,80 @@ namespace homework7
             }
         }
 
-       
+        public bool oExam(string s)
+        {
+            if ( s.Length != 11)
+            {
+                return false;
+            }
+            else
+            {
+                try
 
+                {
+                    string strDate = s.Substring(0, 8);
+                    DateTime dt = DateTime.ParseExact(strDate, "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture);
+                    
+                }
+
+                catch(Exception )
+
+                {
+                    return false;
+
+                }
+                foreach (Order i in order)
+                {
+                    if (i.orderNumber == s)
+                    {
+                        return false;
+                    }
+                }
+                string backNum = s.Substring(s.Length - 3, 3);
+                string patten = "[0-9]{3}";
+                if (!Regex.IsMatch(backNum, patten))
+                {
+                    return false;
+                }               
+                else
+                    return true;
+            }
+        }
+       public bool phoExam(string s)
+        {
+            if (s.Length != 11)
+            {
+                return false;
+            }
+            else if (!Regex.IsMatch(s, @"^[1]+[3,5,7,8]+[0-9]{9}"))
+            {
+                return false;
+            }                        
+            else
+                return true;
+        }
+
+        public void Export(List<Order> or, string xmlFileName)
+        {
+            XmlSerializer xmlser = new XmlSerializer(typeof(List<Order>));
+            using (FileStream fs = new FileStream(xmlFileName, FileMode.Create))
+            {
+                xmlser.Serialize(fs, or);
+            }
+        }
+
+        public void Import(string xmlFileName)
+        {
+            if (Path.GetExtension(xmlFileName) != ".xml")
+                throw new ArgumentException("It isn't a xml file!");
+            using (FileStream fs = new FileStream(xmlFileName, FileMode.Open))
+            {
+                XmlSerializer xs = new XmlSerializer(typeof(List<Order>));
+                List<Order> pl = (List<Order>)xs.Deserialize(fs);
+                order.AddRange(pl);
+                
+            }
+
+        }
     }
 }

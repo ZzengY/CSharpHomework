@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace homework7
 {
+    [Serializable]
     public class Order
     {
         public string orderNumber { get; set; }
         public string clientName { get; set; }
         public double orderPrice { get; set; }
+        public string cliPhoNum { get; set; }
         public List<OrderDetails> orderdetails { get; set; }
         public Order()
         {

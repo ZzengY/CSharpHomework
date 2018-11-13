@@ -50,6 +50,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "订单编号",
             "客户名称",
+            "电话号码",
             "产品名称",
             "产品编号",
             "产品价格"});

@@ -73,6 +73,13 @@ namespace WinForm
                         a++;
                         break;
                     case 2:
+                        if (s0 == f1.Zz.order[a].cliPhoNum)
+                        {
+                            break;
+                        }
+                        a++;
+                        break;
+                    case 3:
                         foreach (OrderDetails o in f1.Zz.order[a].orderdetails)
                             if (s0 == o.productName)
                             {
@@ -80,7 +87,7 @@ namespace WinForm
                             }
                         a++;
                         break;
-                    case 3:
+                    case 4:
                         foreach (OrderDetails o in f1.Zz.order[a].orderdetails)
                             if (s0 == o.productNumber)
                             {
@@ -88,7 +95,7 @@ namespace WinForm
                             }
                         a++;
                         break;
-                    case 4:
+                    case 5:
                         foreach (OrderDetails o in f1.Zz.order[a].orderdetails)
                             if (Convert.ToDouble(s0) == o.productPrice)
                             {
@@ -113,6 +120,7 @@ namespace WinForm
                 or.AddRange(f1.Zz.order);
                 f1.Bin(or);
                 f1.Show();
+                f1.Zz.Export(f1.Zz.order, "a.xml");
                 this.Close();
 
             }   

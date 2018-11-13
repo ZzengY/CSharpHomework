@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace homework7
 {
+    [Serializable]
     public class OrderDetails
     {
         public string productName { get; set; }

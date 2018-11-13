@@ -20,9 +20,9 @@ namespace homework7
             OrderDetails[] z1 = new OrderDetails[] { b };
             OrderDetails[] z2 = new OrderDetails[] { c };
 
-            Zz.AddOrder("12345", "MANZ", z);
-            Zz.AddOrder("1", "LADYZ", z1);
-            Zz.AddOrder("333", "CHILDZ", z2);
+            Zz.AddOrder("12345", "MANZ","", z);
+            Zz.AddOrder("1", "LADYZ","" ,z1);
+            Zz.AddOrder("333", "CHILDZ","", z2);
 
             Zz.calOrderPri();
             Zz.OrderStorage();

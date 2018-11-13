@@ -49,13 +49,18 @@ namespace WinForm
             this.productNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.problemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.problemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.orderNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cliPhoNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.problemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.problemBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -83,28 +88,28 @@ namespace WinForm
             // 创建订单ToolStripMenuItem
             // 
             this.创建订单ToolStripMenuItem.Name = "创建订单ToolStripMenuItem";
-            this.创建订单ToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.创建订单ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
             this.创建订单ToolStripMenuItem.Text = "创建订单";
             this.创建订单ToolStripMenuItem.Click += new System.EventHandler(this.创建订单ToolStripMenuItem_Click);
             // 
             // 删除订单ToolStripMenuItem
             // 
             this.删除订单ToolStripMenuItem.Name = "删除订单ToolStripMenuItem";
-            this.删除订单ToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.删除订单ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
             this.删除订单ToolStripMenuItem.Text = "删除订单";
             this.删除订单ToolStripMenuItem.Click += new System.EventHandler(this.删除订单ToolStripMenuItem_Click);
             // 
             // 修改订单ToolStripMenuItem
             // 
             this.修改订单ToolStripMenuItem.Name = "修改订单ToolStripMenuItem";
-            this.修改订单ToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.修改订单ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
             this.修改订单ToolStripMenuItem.Text = "修改订单";
             this.修改订单ToolStripMenuItem.Click += new System.EventHandler(this.修改订单ToolStripMenuItem_Click);
             // 
             // 查询订单ToolStripMenuItem
             // 
             this.查询订单ToolStripMenuItem.Name = "查询订单ToolStripMenuItem";
-            this.查询订单ToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.查询订单ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
             this.查询订单ToolStripMenuItem.Text = "查询订单";
             this.查询订单ToolStripMenuItem.Click += new System.EventHandler(this.查询订单ToolStripMenuItem_Click);
             // 
@@ -122,14 +127,15 @@ namespace WinForm
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderNumberDataGridViewTextBoxColumn,
             this.clientNameDataGridViewTextBoxColumn,
-            this.orderPriceDataGridViewTextBoxColumn});
+            this.orderPriceDataGridViewTextBoxColumn,
+            this.cliPhoNumDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.orderBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Info;
             this.dataGridView1.Location = new System.Drawing.Point(0, 66);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(491, 451);
+            this.dataGridView1.Size = new System.Drawing.Size(490, 451);
             this.dataGridView1.TabIndex = 2;
             // 
             // dataGridView2
@@ -175,9 +181,18 @@ namespace WinForm
             // 
             this.orderBindingSource.DataSource = typeof(homework7.Order);
             // 
+            // problemBindingSource
+            // 
+            this.problemBindingSource.DataSource = typeof(homework7.Problem);
+            // 
+            // problemBindingSource1
+            // 
+            this.problemBindingSource1.DataSource = typeof(homework7.Problem);
+            // 
             // orderNumberDataGridViewTextBoxColumn
             // 
             this.orderNumberDataGridViewTextBoxColumn.DataPropertyName = "orderNumber";
+            this.orderNumberDataGridViewTextBoxColumn.FillWeight = 85.95602F;
             this.orderNumberDataGridViewTextBoxColumn.HeaderText = "orderNumber";
             this.orderNumberDataGridViewTextBoxColumn.Name = "orderNumberDataGridViewTextBoxColumn";
             this.orderNumberDataGridViewTextBoxColumn.ReadOnly = true;
@@ -185,6 +200,7 @@ namespace WinForm
             // clientNameDataGridViewTextBoxColumn
             // 
             this.clientNameDataGridViewTextBoxColumn.DataPropertyName = "clientName";
+            this.clientNameDataGridViewTextBoxColumn.FillWeight = 85.95602F;
             this.clientNameDataGridViewTextBoxColumn.HeaderText = "clientName";
             this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
             this.clientNameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -192,9 +208,18 @@ namespace WinForm
             // orderPriceDataGridViewTextBoxColumn
             // 
             this.orderPriceDataGridViewTextBoxColumn.DataPropertyName = "orderPrice";
+            this.orderPriceDataGridViewTextBoxColumn.FillWeight = 85.95602F;
             this.orderPriceDataGridViewTextBoxColumn.HeaderText = "orderPrice";
             this.orderPriceDataGridViewTextBoxColumn.Name = "orderPriceDataGridViewTextBoxColumn";
             this.orderPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cliPhoNumDataGridViewTextBoxColumn
+            // 
+            this.cliPhoNumDataGridViewTextBoxColumn.DataPropertyName = "cliPhoNum";
+            this.cliPhoNumDataGridViewTextBoxColumn.FillWeight = 142.132F;
+            this.cliPhoNumDataGridViewTextBoxColumn.HeaderText = "cliPhoNum";
+            this.cliPhoNumDataGridViewTextBoxColumn.Name = "cliPhoNumDataGridViewTextBoxColumn";
+            this.cliPhoNumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
@@ -212,6 +237,8 @@ namespace WinForm
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.problemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.problemBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,13 +254,16 @@ namespace WinForm
         private System.Windows.Forms.ToolStripMenuItem 查询订单ToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource orderBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource problemBindingSource;
+        private System.Windows.Forms.BindingSource problemBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cliPhoNumDataGridViewTextBoxColumn;
     }
 }
 

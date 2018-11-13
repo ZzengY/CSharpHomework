@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order", "homework7\Order.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm", "WinForm\WinForm.csproj", "{936DA3F8-655A-47D6-8D25-5D4D2F17D3B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlTransform", "XmlTransform.cs\XmlTransform.csproj", "{A5D1D3B5-8D1E-4556-9BE1-E78BEB786A0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{936DA3F8-655A-47D6-8D25-5D4D2F17D3B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{936DA3F8-655A-47D6-8D25-5D4D2F17D3B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{936DA3F8-655A-47D6-8D25-5D4D2F17D3B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D1D3B5-8D1E-4556-9BE1-E78BEB786A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D1D3B5-8D1E-4556-9BE1-E78BEB786A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D1D3B5-8D1E-4556-9BE1-E78BEB786A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D1D3B5-8D1E-4556-9BE1-E78BEB786A0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
